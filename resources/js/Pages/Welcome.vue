@@ -1,7 +1,6 @@
 <script setup>
-import Icon_Cloud from '@/Components/Icons/Icon_Cloud.vue';
-import Icon_CaretDown from '@/Components/Icons/Icon_CaretDown.vue';
 import { Head } from '@inertiajs/vue3';
+import Layout from '@/Layouts/Layout.vue';
 
 import { register as registerSwiper } from "swiper/element/bundle";
 registerSwiper();
@@ -27,69 +26,72 @@ defineProps({
 <template>
 
 	<Head title="Willkommen"></Head>
-	<header class="flex justify-between gap-4 items-center">
-		<a href="/">
-			<Icon_Cloud class="text-pink-600 w-12 h-auto aspect-square"></Icon_Cloud>
-		</a>
-		<nav class="h-max">
-			<ul class="flex gap-2 items-center">
-				<li>
-					<a href="/" class="uppercase font-bold text-pink-600 text-xl">Startseite</a>
-				</li>
-				<li class="group relative">
-					<button class="flex items-center uppercase font-bold text-pink-600 text-xl">
-						Über uns
-						<Icon_CaretDown
-							class="-mt-[2px] transition-transform duration-300 group-hover:-scale-100 w-6 h-auto aspect-square">
-						</Icon_CaretDown>
-					</button>
-					<ul class="
-							opacity-0 pointer-events-none group-hover:block absolute top-full group-hover:pointer-events-auto group-hover:opacity-100 transition-opacity duration-300 bg-pink-100
-							rounded-md p-4 right-0
-						">
-						<li>
-							<a href="kontakt" class="uppercase font-bold text-pink-600 text-xl">Kontakt</a>
-						</li>
-					</ul>
-				</li>
-			</ul>
-		</nav>
-	</header>
+	<Layout>
+		<section>
+			<div class="text-center">
+				<h1 class="text-[38px] leading-[45px] font-extralight">Schauen und Staunen.</h1>
+				<h2
+					class="uppercase font-extrabold text-xl sm:text-3xl md:text-4xl lg:text-[54px] lg:leading-[64px] mt-[13px] text-pink-600">
+					Willkommen
+					auf
+					dieser Seite.</h2>
+			</div>
+			<swiper-container thumbs-swiper=".swiper" loop="true" space-between="10" class="rounded-md overflow-hidden mt-10">
+				<swiper-slide>
+					<picture>
+						<source srcset="../../images/home/swiper/mann-1.png?w=200;400;1900&format=webp&as=srcset" type="image/webp">
+						<img src="../../images/home/swiper/mann-1.png?w=300&format=webp" width="300" height="90"
+							class="w-full aspect-[3/1] object-cover" alt="astonished man with raised eyebrows">
+					</picture>
+				</swiper-slide>
+				<swiper-slide>
+					<picture>
+						<source srcset="../../images/home/swiper/mann-2.png?w=200;400;1900&format=webp&as=srcset">
+						<img src="../../images/home/swiper/mann-2.png?w=300&format=webp" width="300" height="90"
+							class="w-full aspect-[3/1] object-cover" alt="man in a thoughtful pose">
+					</picture>
+				</swiper-slide>
+				<swiper-slide>
+					<picture>
+						<source srcset="../../images/home/swiper/mann-3.png?w=200;400;1900&format=webp&as=srcset">
+						<img src="../../images/home/swiper/mann-3.png?w=300&format=webp" width="300" height="90"
+							class="w-full aspect-[3/1] object-cover" alt="man looking upwards">
+					</picture>
+				</swiper-slide>
+			</swiper-container>
+			<swiper-container class="swiper [&::part(wrapper)]:justify-center mt-[37px]" space-between="10"
+				slides-per-view="3" free-mode="true" watch-slides-progress="true">
+				<swiper-slide
+					class="border-2 border-transparent [&.swiper-slide-thumb-active]:border-pink-600 !w-max cursor-pointer rounded-md overflow-hidden"><img
+						src="../../images/home/swiper/mann-1.png?w=50&h=50&format=webp"></swiper-slide>
+				<swiper-slide
+					class="border-2 border-transparent [&.swiper-slide-thumb-active]:border-pink-600 !w-max cursor-pointer rounded-md overflow-hidden"><img
+						src="../../images/home/swiper/mann-2.png?w=50&h=50&format=webp"></swiper-slide>
+				<swiper-slide
+					class="border-2 border-transparent [&.swiper-slide-thumb-active]:border-pink-600 !w-max cursor-pointer rounded-md overflow-hidden"><img
+						src="../../images/home/swiper/mann-3.png?w=50&h=50&format=webp"></swiper-slide>
+			</swiper-container>
+			<p class="max-w-[812px] text-center text-lg leading-[31px] mx-auto font-light mt-[60px]">
+				Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+				ut labore et dolore magna aliquyam erat. sed diam voluptua. At vero eos et accusam et justo duo
+				dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsurn dolor sit.
+			</p>
+		</section>
 
-	<section>
-		<div class="text-center">
-			<h1 class="text-2xl font-light">Schauen und Staunen.</h1>
-			<h2 class="uppercase font-extrabold text-xl sm:text-3xl md:text-4xl lg:text-5xl mt-2 text-pink-600">Willkommen auf
-				dieser Seite.</h2>
-		</div>
-		<swiper-container thumbs-swiper=".swiper" loop="true" space-between="10" class="rounded-md overflow-hidden mt-8">
-			<swiper-slide><img src="../../images/home/swiper/lollipop.jpg?w=1900&format=webp"
-					class="w-full aspect-[3/1] object-cover"></swiper-slide>
-			<swiper-slide><img src="../../images/home/swiper/balloons.jpg?w=1900&format=webp"
-					class="w-full aspect-[3/1] object-cover"></swiper-slide>
-			<swiper-slide><img src="../../images/home/swiper/blooms.jpg?w=1900&format=webp"
-					class="w-full aspect-[3/1] object-cover"></swiper-slide>
-		</swiper-container>
-		<!-- <div class="flex gap-4 items-center justify-center">
-			<button v-for="i in 3" :key="i" @click="">{{ i }}</button>
-		</div> -->
-		<swiper-container class="swiper [&::part(wrapper)]:justify-center mt-4" space-between="10" slides-per-view="3"
-			free-mode="true" watch-slides-progress="true">
-			<swiper-slide
-				class="border-2 border-transparent [&.swiper-slide-thumb-active]:border-pink-600 !w-max cursor-pointer rounded-md overflow-hidden"><img
-					src="../../images/home/swiper/lollipop.jpg?w=50&h=50&format=webp"></swiper-slide>
-			<swiper-slide
-				class="border-2 border-transparent [&.swiper-slide-thumb-active]:border-pink-600 !w-max cursor-pointer rounded-md overflow-hidden"><img
-					src="../../images/home/swiper/balloons.jpg?w=50&h=50&format=webp"></swiper-slide>
-			<swiper-slide
-				class="border-2 border-transparent [&.swiper-slide-thumb-active]:border-pink-600 !w-max cursor-pointer rounded-md overflow-hidden"><img
-					src="../../images/home/swiper/blooms.jpg?w=50&h=50&format=webp"></swiper-slide>
-		</swiper-container>
-	</section>
-
-	<section>
-
-	</section>
+		<section class="h-dvh grid place-content-center">
+			<h2 class="uppercase mt-6">Unser Team</h2>
+			<div class="flex flex-wrap gap-4 mt-[30px]">
+				<section v-for="i in 2" class="grid justify-center">
+					<img src="" alt="">
+					<h3>Test Test</h3>
+					<a href="mailto:test@test.de" class="font-light">test@test.de</a>
+				</section>
+			</div>
+			<a class="bg-pink-100 uppercase py-2 px-16 text-pink-600 rounded-md mt-[103px] text-2xl font-extrabold"
+				href="/ueber-uns">&#xDC;ber
+				uns</a>
+		</section>
+	</Layout>
 </template>
 
 <style>
