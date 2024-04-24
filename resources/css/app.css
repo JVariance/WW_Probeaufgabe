@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply w-dvw h-dvh overflow-hidden m-0 p-0 @container;
+    font-family: 'Open Sans' !important;
+}
+
+#app {
+    @apply w-[100cqw] h-[100cqh] overflow-auto box-border max-w-[1600px] mx-auto p-[10px];
+}
