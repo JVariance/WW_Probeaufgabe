@@ -1,10 +1,10 @@
 <script setup>
-	import Icon_Cloud from '@/Components/Icons/Icon_Cloud.vue';
-	import Icon_CaretDown from '@/Components/Icons/Icon_CaretDown.vue';
+import Icon_Cloud from '@/Components/Icons/Icon_Cloud.vue';
+import Icon_CaretDown from '@/Components/Icons/Icon_CaretDown.vue';
 </script>
 
 <template>
-	<header class="flex justify-between gap-4 items-center h-32">
+	<header class="flex justify-between gap-4 items-center h-32 sticky top-0 z-50 bg-white">
 		<a href="/">
 			<Icon_Cloud class="text-pink-600 w-12 h-auto aspect-square"></Icon_Cloud>
 		</a>

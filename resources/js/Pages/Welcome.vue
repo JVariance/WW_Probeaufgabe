@@ -1,25 +1,16 @@
 <script setup>
 import { Head } from '@inertiajs/vue3';
 import Layout from '@/Layouts/Layout.vue';
+import Team from './Partials/Team.vue';
 
 import { register as registerSwiper } from "swiper/element/bundle";
 registerSwiper();
 
 defineProps({
-	canLogin: {
-		type: Boolean,
-	},
-	canRegister: {
-		type: Boolean,
-	},
-	laravelVersion: {
-		type: String,
+	teamMembers: {
+		type: Array,
 		required: true,
-	},
-	phpVersion: {
-		type: String,
-		required: true,
-	},
+	}
 });
 </script>
 
@@ -41,21 +32,21 @@ defineProps({
 					<picture>
 						<source srcset="../../images/home/swiper/mann-1.png?w=200;400;1900&format=webp&as=srcset" type="image/webp">
 						<img src="../../images/home/swiper/mann-1.png?w=300&format=webp" width="300" height="90"
-							class="w-full aspect-[3/1] object-cover" alt="astonished man with raised eyebrows">
+							class="w-full aspect-[3/1] object-cover" alt="Erstaunter Mann mit hochgezogenen Augenbrauen">
 					</picture>
 				</swiper-slide>
 				<swiper-slide>
 					<picture>
 						<source srcset="../../images/home/swiper/mann-2.png?w=200;400;1900&format=webp&as=srcset">
 						<img src="../../images/home/swiper/mann-2.png?w=300&format=webp" width="300" height="90"
-							class="w-full aspect-[3/1] object-cover" alt="man in a thoughtful pose">
+							class="w-full aspect-[3/1] object-cover" alt="Mann in nachdenklicher Pose">
 					</picture>
 				</swiper-slide>
 				<swiper-slide>
 					<picture>
 						<source srcset="../../images/home/swiper/mann-3.png?w=200;400;1900&format=webp&as=srcset">
 						<img src="../../images/home/swiper/mann-3.png?w=300&format=webp" width="300" height="90"
-							class="w-full aspect-[3/1] object-cover" alt="man looking upwards">
+							class="w-full aspect-[3/1] object-cover" alt="Mann schaut nach oben">
 					</picture>
 				</swiper-slide>
 			</swiper-container>
@@ -63,13 +54,16 @@ defineProps({
 				slides-per-view="3" free-mode="true" watch-slides-progress="true">
 				<swiper-slide
 					class="border-2 border-transparent [&.swiper-slide-thumb-active]:border-pink-600 !w-max cursor-pointer rounded-md overflow-hidden"><img
-						src="../../images/home/swiper/mann-1.png?w=50&h=50&format=webp"></swiper-slide>
+						src="../../images/home/swiper/mann-1.png?w=50&h=50&format=webp"
+						alt="Erstaunter Mann mit hochgezogenen Augenbrauen - Thumbnail"></swiper-slide>
 				<swiper-slide
 					class="border-2 border-transparent [&.swiper-slide-thumb-active]:border-pink-600 !w-max cursor-pointer rounded-md overflow-hidden"><img
-						src="../../images/home/swiper/mann-2.png?w=50&h=50&format=webp"></swiper-slide>
+						src="../../images/home/swiper/mann-2.png?w=50&h=50&format=webp"
+						alt="Mann in nachdenklicher Pose - Thumbnail"></swiper-slide>
 				<swiper-slide
 					class="border-2 border-transparent [&.swiper-slide-thumb-active]:border-pink-600 !w-max cursor-pointer rounded-md overflow-hidden"><img
-						src="../../images/home/swiper/mann-3.png?w=50&h=50&format=webp"></swiper-slide>
+						src="../../images/home/swiper/mann-3.png?w=50&h=50&format=webp"
+						alt="Mann schaut nach oben - Thumbnail"></swiper-slide>
 			</swiper-container>
 			<p class="max-w-[812px] text-center text-lg leading-[31px] mx-auto font-light mt-[60px]">
 				Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
@@ -78,16 +72,12 @@ defineProps({
 			</p>
 		</section>
 
-		<section class="h-dvh grid place-content-center">
-			<h2 class="uppercase mt-6">Unser Team</h2>
-			<div class="flex flex-wrap gap-4 mt-[30px]">
-				<section v-for="i in 2" class="grid justify-center">
-					<img src="" alt="">
-					<h3>Test Test</h3>
-					<a href="mailto:test@test.de" class="font-light">test@test.de</a>
-				</section>
+		<section class="min-h-dvh grid place-content-center">
+			<h2 class="uppercase mt-6 text-[38px] leading-[45px] font-extralight">Unser Team</h2>
+			<div class="flex flex-wrap gap-x-4 gap-y-12 mt-[30px]">
+				<Team :teamMembers></Team>
 			</div>
-			<a class="bg-pink-100 uppercase py-2 px-16 text-pink-600 rounded-md mt-[103px] text-2xl font-extrabold"
+			<a class="bg-pink-100 uppercase py-2 px-16 text-pink-600 rounded-md mt-[103px] text-2xl font-extrabold w-max justify-self-center"
 				href="/ueber-uns">&#xDC;ber
 				uns</a>
 		</section>
