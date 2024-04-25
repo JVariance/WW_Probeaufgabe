@@ -7,6 +7,20 @@ body {
     font-family: "Open Sans" !important;
 }
 
+@supports selector(:popover-open) {
+    body:has(#nav:popover-open) {
+        pointer-events: none;
+
+        #nav {
+            pointer-events: all;
+
+            * {
+                pointer-events: all;
+            }
+        }
+    }
+}
+
 #app {
     @apply w-[100cqw] h-[100cqh] overflow-auto box-border;
     /* scroll-timeline: --app y;

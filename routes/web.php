@@ -51,7 +51,7 @@ Route::post('/kontakt/formular', function (Request $request) {
 		'vorname.required' => 'Bitte geben Sie Ihren Vornamen an.',
 		'nachname.required' => 'Bitte geben Sie Ihren Nachnamen an.',
 		'email.required' => 'Bitte geben Sie Ihre E-Mail-Adresse an.',
-		'einwilligung.accepted' => 'Bitte akzeptiere die Datenschutzbestimmungen.',
+		'einwilligung.accepted' => 'Bitte akzeptieren Sie die Datenschutzbestimmungen.',
 	]);
 	Mail::send(new ContactFormSent());
 

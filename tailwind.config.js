@@ -17,6 +17,9 @@ export default {
 			fontFamily: {
 				sans: ['Figtree', ...defaultTheme.fontFamily.sans],
 			},
+			screens: {
+				'sm-only': { max: '640px' }
+			}
 		},
 	},
 
