@@ -25,7 +25,7 @@ function getTeamMemberImageSrc(imageUrl) {
 		<!-- </picture> -->
 		<h3 class="text-center mt-6 uppercase text-pink-600 font-extrabold text-2xl">{{ member?.first_name ?? '' }} {{
 			member?.last_name ?? '' }}</h3>
-		<a :href="`mailto: ${member?.email ?? ''}`" class="font-light text-center text-2xl">{{ member?.email ?? '-'
+		<a :href="`mailto: ${member?.email ?? ''}`" class="font-light text-center sm:text-2xl">{{ member?.email ?? '-'
 			}}</a>
 	</section>
 </template>

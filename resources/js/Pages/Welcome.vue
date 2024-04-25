@@ -4,6 +4,7 @@ import Layout from '@/Layouts/Layout.vue';
 import Team from './Partials/Team.vue';
 
 import { register as registerSwiper } from "swiper/element/bundle";
+import PageHeading from './Partials/PageHeading.vue';
 registerSwiper();
 
 defineProps({
@@ -20,12 +21,10 @@ defineProps({
 	<Layout>
 		<section>
 			<div class="text-center">
-				<h1 class="text-[38px] leading-[45px] font-extralight">Schauen und Staunen.</h1>
-				<h2
-					class="uppercase font-extrabold text-xl sm:text-3xl md:text-4xl lg:text-[54px] lg:leading-[64px] mt-[13px] text-pink-600">
-					Willkommen
-					auf
-					dieser Seite.</h2>
+				<PageHeading>
+					<template v-slot:subtitle>Schauen und Staunen.</template>
+					<template v-slot:title>Willkommen auf dieser Seite.</template>
+				</PageHeading>
 			</div>
 			<swiper-container thumbs-swiper=".swiper" loop="true" space-between="10" class="rounded-md overflow-hidden mt-10">
 				<swiper-slide>
