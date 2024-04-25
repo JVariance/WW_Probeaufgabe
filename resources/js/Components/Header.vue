@@ -15,7 +15,7 @@ import NavLink2 from './NavLink2.vue';
 			class="sm-only:!mx-4 sm-only:rounded-t-md sm-only:py-16 sm:h-max sm-only:bg-pink-100 sm:block sm:static sm:m-0 sm:overflow-visible"
 			popover>
 			<button popovertarget="nav" popovertargetaction="hide" aria-label="Menü schließen"
-				class="absolute top-4 right-4 bg-transparent text-pink-600">
+				class="sm:hidden absolute top-4 right-4 bg-transparent text-pink-600">
 				<Icon_Close class="size-6"></Icon_Close>
 			</button>
 			<ul class="grid sm-only:justify-items-center sm:flex gap-10 items-center">
@@ -99,33 +99,31 @@ import NavLink2 from './NavLink2.vue';
 		}
 
 		#nav {
-			display: block;
-			height: max-content;
-			padding: 0.25rem;
-			margin-bottom: 0.25rem;
-			/* box-shadow: 0 0 0 100dvh rgba(0 0 0 / 0.5); */
+			@apply block h-max px-4 py-2 mb-1 overflow-auto;
+			width: calc(100cqw - 2rem);
 
 			&>ul {
-				display: flex;
-				flex-direction: row;
-				overflow: auto;
-				height: max-content;
-				padding: 0;
+				@apply flex;
 			}
 
 			button[popovertargetaction="hide"] {
-				display: none;
+				@apply hidden;
 			}
 
 			li {
-				white-space: nowrap;
+				@apply whitespace-nowrap;
+			}
+
+			.has-dropdown {
+				@apply flex;
 			}
 
 			.has-dropdown>ul {
-				flex-direction: row;
+				@apply flex-row;
 
-				&>div {
-					flex-wrap: nowrap;
+
+				&>li {
+					@apply flex-nowrap ml-10;
 				}
 			}
 		}
