@@ -3,7 +3,7 @@ import Icon_Cloud from '@/Components/Icons/Icon_Cloud.vue';
 import Icon_CaretDown from '@/Components/Icons/Icon_CaretDown.vue';
 import Icon_Hamburger from '@/Components/Icons/Icon_Hamburger.vue';
 import Icon_Close from '@/Components/Icons/Icon_Close.vue';
-import NavLink2 from './NavLink2.vue';
+import NavLink from './NavLink.vue';
 </script>
 
 <template>
@@ -20,25 +20,25 @@ import NavLink2 from './NavLink2.vue';
 			</button>
 			<ul class="grid sm-only:justify-items-center sm:flex gap-10 items-center">
 				<li>
-					<NavLink2 href="/">
+					<NavLink href="/">
 						Startseite
-					</NavLink2>
+					</NavLink>
 				</li>
 				<li class="group relative has-dropdown">
-					<NavLink2 href="/ueber-uns" class="flex items-center">
+					<NavLink href="/ueber-uns" class="flex items-center">
 						&#xdc;ber uns
 						<Icon_CaretDown
 							class="sm-only:hidden -mt-[2px] transition-transform duration-300 sm:group-hover:-scale-100 w-6 h-auto aspect-square">
 						</Icon_CaretDown>
-					</NavLink2>
+					</NavLink>
 					<ul class="
 						sm:opacity-0 sm:pointer-events-none sm:group-hover:block sm:group-focus-within:block sm:absolute top-full sm:group-hover:pointer-events-auto sm:group-focus-within:pointer-events-auto sm:group-hover:opacity-100 sm:group-focus-within:opacity-100 transition-opacity duration-300 sm:bg-pink-100
 						rounded-md sm:p-4 right-0
 					">
 						<li>
-							<NavLink2 href="/kontakt">
+							<NavLink href="/kontakt">
 								Kontakt
-							</NavLink2>
+							</NavLink>
 						</li>
 					</ul>
 				</li>
