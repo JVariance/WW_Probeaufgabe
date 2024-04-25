@@ -26,7 +26,8 @@ defineProps({
 					<template v-slot:title>Willkommen auf dieser Seite.</template>
 				</PageHeading>
 			</div>
-			<swiper-container thumbs-swiper=".swiper" loop="true" space-between="10" class="rounded-md overflow-hidden mt-10">
+			<swiper-container thumbs-swiper=".swiper" loop="true" space-between="10"
+				class="rounded-md overflow-hidden mt-10 animate-fade-up">
 				<swiper-slide>
 					<picture>
 						<source srcset="../../images/home/swiper/mann-1.png?w=200;400;1900&format=webp&as=srcset" type="image/webp">
@@ -49,7 +50,7 @@ defineProps({
 					</picture>
 				</swiper-slide>
 			</swiper-container>
-			<swiper-container class="swiper [&::part(wrapper)]:justify-center mt-[37px]" space-between="10"
+			<swiper-container class="swiper [&::part(wrapper)]:justify-center mt-[37px] animate-fade-up" space-between="10"
 				slides-per-view="3" free-mode="true" watch-slides-progress="true">
 				<swiper-slide
 					class="border-2 border-transparent [&.swiper-slide-thumb-active]:border-pink-600 !w-max cursor-pointer rounded-md overflow-hidden"><img
@@ -64,16 +65,17 @@ defineProps({
 						src="../../images/home/swiper/mann-3.png?w=50&h=50&format=webp"
 						alt="Mann schaut nach oben - Thumbnail"></swiper-slide>
 			</swiper-container>
-			<p class="max-w-[812px] text-center text-lg leading-[31px] mx-auto font-light mt-[60px]">
+			<p class="max-w-[812px] text-center text-lg leading-[31px] mx-auto font-light mt-[60px] animate-fade-up">
 				Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
 				ut labore et dolore magna aliquyam erat. sed diam voluptua. At vero eos et accusam et justo duo
 				dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsurn dolor sit.
 			</p>
 		</section>
 
-		<section class="min-h-dvh grid place-content-center">
-			<h2 class="uppercase mt-6 text-[38px] leading-[45px] font-extralight">Unser Team</h2>
-			<div class="flex flex-wrap gap-x-4 gap-y-12 mt-[30px]">
+		<section class="min-h-dvh grid place-content-center fade-in-from-bottom ![--from:50dvh]">
+			<h2 class="uppercase mt-6 text-[38px] leading-[45px] font-extralight text-center @[1107px]:text-left">Unser Team
+			</h2>
+			<div class="flex flex-wrap justify-center gap-x-4 gap-y-12 mt-[30px]">
 				<Team :teamMembers></Team>
 			</div>
 			<a class="bg-pink-100 uppercase py-2 px-16 text-pink-600 rounded-md mt-[103px] text-2xl font-extrabold w-max justify-self-center"

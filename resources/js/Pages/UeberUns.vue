@@ -21,16 +21,13 @@ defineProps({
 				<template v-slot:subtitle>&#xDC;ber uns</template>
 				<template v-slot:title>Zusammen als Team.</template>
 			</PageHeading>
-			<p class="text-center font-light sm:text-lg sm:leading-[31px] max-w-[812px] mt-[88px] mx-auto">Lorem ipsum dolor
-				sit
-				amet,
-				consetetur
-				sadipscing elitr,
-				sed diam nonumy eirmod tempor invidunt ut labore et
+			<p class="text-center font-light sm:text-lg sm:leading-[31px] max-w-[812px] mt-[88px] mx-auto animate-fade-up">
+				Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
 				dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
 				clita
-				kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit.</p>
-			<div class="flex flex-wrap gap-x-4 gap-y-12 mt-[92px] justify-center">
+				kasd
+				gubergren, no sea takimata sanctus est Lorem ipsum dolor sit.</p>
+			<div class="flex flex-wrap gap-x-4 gap-y-12 mt-[92px] justify-center animate-fade-up">
 				<Team :teamMembers></Team>
 			</div>
 		</main>

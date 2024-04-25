@@ -1,6 +1,7 @@
 import defaultTheme from 'tailwindcss/defaultTheme';
 import forms from '@tailwindcss/forms';
 import containerQueries from "@tailwindcss/container-queries";
+import tailwindCSSAnimated from "tailwindcss-animated";
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -19,5 +20,5 @@ export default {
 		},
 	},
 
-	plugins: [containerQueries, forms],
+	plugins: [containerQueries, tailwindCSSAnimated, forms],
 };

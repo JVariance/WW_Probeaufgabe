@@ -34,7 +34,7 @@ const submit = () => {
 				<template v-slot:subtitle>Kontakt</template>
 				<template v-slot:title>Wir sind f&#xfc;r Sie da.</template>
 			</PageHeading>
-			<section class="mt-[119px]">
+			<section class="mt-[119px] animate-fade-up">
 				<div v-if="success" class="flex justify-center items-center">
 					<p class="font-extralight text-[38px] leading-[45px] text-center">
 						Vielen Dank für Ihre Nachricht.<br>
