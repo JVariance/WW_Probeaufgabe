@@ -2,7 +2,6 @@
 import { Head, useForm } from '@inertiajs/vue3';
 import PageHeading from './Partials/PageHeading.vue';
 import Layout from '@/Layouts/Layout.vue';
-import Button from '@/Components/Button.vue';
 
 defineProps({
 	success: {
@@ -76,10 +75,12 @@ const submit = () => {
 						<p class="col-span-full mt-6 text-2xl font-light">* Pflichtfelder</p>
 						<label class="col-span-full mt-4">
 							<input type="checkbox" name="einwilligung" id="" v-model="form.einwilligung" required>
-							Hiermit erkläre ich, dass: meine Daten zur weiteren Verarbeitung speichern darf. Diese Einwilligung kann
-							jederzeit widerrufen werden. Weitere Informationen unter Datenschutz. <span aria-hidden="true">*</span>
+							Hiermit erkl&#xe4;re ich, dass: meine Daten zur weiteren Verarbeitung gespeichert werden d&#xfc;rfen.
+							Diese
+							Einwilligung kann
+							jederzeit widerrufen werden. Weitere Informationen unter Datenschutz.<span aria-hidden="true">*</span>
 						</label>
-						<Button variant="primary" class="mt-14 w-fit">Absenden</Button>
+						<button class="btn-secondary mt-14 w-fit">Absenden</button>
 					</form>
 				</template>
 			</section>

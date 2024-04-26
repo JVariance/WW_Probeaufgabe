@@ -33,6 +33,11 @@ body {
 }
 
 @layer base {
+    :root {
+        --color-primary: 219 39 119;
+        --color-secondary: 252 231 243;
+    }
+
     h1,
     h2,
     h3,
@@ -40,6 +45,22 @@ body {
     h5,
     h6 {
         font-family: "Raleway", sans-serif !important;
+    }
+}
+
+@layer components {
+    .btn {
+        @apply uppercase font-extrabold text-2xl px-16 py-2 rounded-md;
+    }
+
+    .btn-primary {
+        @apply btn;
+        @apply bg-primary text-white;
+    }
+
+    .btn-secondary {
+        @apply btn;
+        @apply bg-secondary text-primary;
     }
 }
 

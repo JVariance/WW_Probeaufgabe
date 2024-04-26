@@ -11,7 +11,7 @@ defineProps({
 		<slot name="subtitle"></slot>
 	</h2>
 	<h1
-		:class="`font-extrabold uppercase text-pink-600 text-3xl sm:text-[54px] sm:leading-[64px] mt-[13px] text-center animate-fade-left animation-duration-1000 ${titleClasses}`">
+		:class="`font-extrabold uppercase text-primary text-3xl sm:text-[54px] sm:leading-[64px] mt-[13px] text-center animate-fade-left animation-duration-1000 ${titleClasses}`">
 		<slot name="title"></slot>
 	</h1>
 </template>

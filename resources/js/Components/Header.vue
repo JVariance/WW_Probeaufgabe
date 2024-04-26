@@ -9,13 +9,13 @@ import NavLink from './NavLink.vue';
 <template>
 	<header class="flex justify-between gap-4 items-center h-32 sticky top-0 z-50 bg-white">
 		<a href="/" aria-label="Zur Startseite">
-			<Icon_Cloud class="text-pink-600 size-12" role="presentation" </Icon_Cloud>
+			<Icon_Cloud class="text-primary size-12" role="presentation" </Icon_Cloud>
 		</a>
 		<nav id="nav"
-			class="sm-only:!mx-4 sm-only:rounded-t-md sm-only:py-16 sm:h-max sm-only:bg-pink-100 sm:block sm:static sm:m-0 sm:overflow-visible"
+			class="sm-only:!mx-4 sm-only:rounded-t-md sm-only:py-16 sm:h-max sm-only:bg-secondary sm:block sm:static sm:m-0 sm:overflow-visible"
 			popover>
 			<button popovertarget="nav" popovertargetaction="hide" aria-label="Menü schließen"
-				class="sm:hidden absolute top-4 right-4 bg-transparent text-pink-600">
+				class="sm:hidden absolute top-4 right-4 bg-transparent text-primary">
 				<Icon_Close class="size-6"></Icon_Close>
 			</button>
 			<ul class="grid sm-only:justify-items-center sm:flex gap-10 items-center">
@@ -32,7 +32,7 @@ import NavLink from './NavLink.vue';
 						</Icon_CaretDown>
 					</NavLink>
 					<ul class="
-						sm:opacity-0 sm:pointer-events-none sm:group-hover:block sm:group-focus-within:block sm:absolute top-full sm:group-hover:pointer-events-auto sm:group-focus-within:pointer-events-auto sm:group-hover:opacity-100 sm:group-focus-within:opacity-100 transition-opacity duration-300 sm:bg-pink-100
+						sm:opacity-0 sm:pointer-events-none sm:group-hover:block sm:group-focus-within:block sm:absolute top-full sm:group-hover:pointer-events-auto sm:group-focus-within:pointer-events-auto sm:group-hover:opacity-100 sm:group-focus-within:opacity-100 transition-opacity duration-300 sm:bg-secondary
 						rounded-md sm:p-4 right-0
 					" aria-label="Mehr-Submenü">
 						<li>
@@ -45,7 +45,7 @@ import NavLink from './NavLink.vue';
 			</ul>
 		</nav>
 		<button popovertarget="nav" type="button"
-			class="sm:hidden cursor-pointer bg-opacity-100 w-16 h-16 flex justify-center items-center rounded-md fixed bottom-4 left-4 z-[60] text-white bg-pink-600 shadow-lg shadow-pink-900"
+			class="sm:hidden cursor-pointer bg-opacity-100 w-16 h-16 flex justify-center items-center rounded-md fixed bottom-4 left-4 z-[60] text-white bg-primary shadow-lg shadow-pink-900"
 			aria-label="Menü">
 			<Icon_Hamburger class="w-10 h-auto aspect-square"></Icon_Hamburger>
 		</button>

@@ -53,15 +53,15 @@ defineProps({
 			<swiper-container class="swiper [&::part(wrapper)]:justify-center mt-[37px] animate-fade-up" space-between="10"
 				slides-per-view="3" free-mode="true" watch-slides-progress="true">
 				<swiper-slide
-					class="border-2 border-transparent [&.swiper-slide-thumb-active]:border-pink-600 !w-max cursor-pointer rounded-md overflow-hidden"><img
+					class="border-2 border-transparent [&.swiper-slide-thumb-active]:border-primary !w-max cursor-pointer rounded-md overflow-hidden"><img
 						src="../../images/home/swiper/mann-1.png?w=50&h=50&format=webp"
 						alt="Erstaunter Mann mit hochgezogenen Augenbrauen - Thumbnail"></swiper-slide>
 				<swiper-slide
-					class="border-2 border-transparent [&.swiper-slide-thumb-active]:border-pink-600 !w-max cursor-pointer rounded-md overflow-hidden"><img
+					class="border-2 border-transparent [&.swiper-slide-thumb-active]:border-primary !w-max cursor-pointer rounded-md overflow-hidden"><img
 						src="../../images/home/swiper/mann-2.png?w=50&h=50&format=webp"
 						alt="Mann in nachdenklicher Pose - Thumbnail"></swiper-slide>
 				<swiper-slide
-					class="border-2 border-transparent [&.swiper-slide-thumb-active]:border-pink-600 !w-max cursor-pointer rounded-md overflow-hidden"><img
+					class="border-2 border-transparent [&.swiper-slide-thumb-active]:border-primary !w-max cursor-pointer rounded-md overflow-hidden"><img
 						src="../../images/home/swiper/mann-3.png?w=50&h=50&format=webp"
 						alt="Mann schaut nach oben - Thumbnail"></swiper-slide>
 			</swiper-container>
@@ -78,9 +78,9 @@ defineProps({
 			<div class="flex flex-wrap justify-center gap-x-4 gap-y-12 mt-[30px]">
 				<Team :teamMembers></Team>
 			</div>
-			<a class="bg-pink-100 uppercase py-2 px-16 text-pink-600 rounded-md mt-[103px] text-2xl font-extrabold w-max justify-self-center"
-				href="/ueber-uns">&#xDC;ber
-				uns</a>
+			<a class="btn-secondary mt-[103px] w-max justify-self-center" href="/ueber-uns">
+				&#xDC;ber uns
+			</a>
 		</section>
 	</Layout>
 </template>
