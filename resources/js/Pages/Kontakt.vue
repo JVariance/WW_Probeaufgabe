@@ -44,22 +44,24 @@ const submit = () => {
 				<template v-else>
 					<h2 class="text-[38px] leading-[45px] font-extralight">Kontaktformular</h2>
 					<form class="grid gap-4 sm:grid-cols-2 mt-[30px] max-w-[1088px]" @submit.prevent="submit" novalidate>
-						<label class="grid gap-1">
-							<input type="text" name="vorname" class="border-none rounded-sm bg-[#ececed]" v-model="form.vorname">
-							Vorname*
+						<label class="flex flex-wrap gap-1">
+							<input type="text" name="vorname" class="border-none rounded-sm bg-[#ececed] w-full"
+								v-model="form.vorname" required>
+							Vorname<span aria-hidden="true">*</span>
 						</label>
-						<label class="grid gap-1">
-							<input type="text" name="nachname" class="border-none rounded-sm bg-[#ececed]" required
+						<label class="flex flex-wrap gap-1">
+							<input type="text" name="nachname" class="border-none rounded-sm bg-[#ececed] w-full" required
 								v-model="form.nachname">
-							Nachname*
+							Nachname<span aria-hidden="true">*</span>
 						</label>
-						<label class="grid gap-1">
-							<input type="email" name="email" class="border-none rounded-sm bg-[#ececed]" required
+						<label class="flex flex-wrap gap-1">
+							<input type="email" name="email" class="border-none rounded-sm bg-[#ececed] w-full" required
 								v-model="form.email">
-							E-Mail*
+							E-Mail<span aria-hidden="true">*</span>
 						</label>
-						<label class="grid gap-1">
-							<input type="tel" name="telefon" class="border-none rounded-sm bg-[#ececed]" v-model="form.telefon">
+						<label class="flex flex-wrap gap-1">
+							<input type="tel" name="telefon" class="border-none rounded-sm bg-[#ececed] w-full"
+								v-model="form.telefon">
 							Telefon
 						</label>
 						<div v-if="Object.keys(form.errors).length" class="text-red-500 mt-[45px]">
@@ -73,9 +75,9 @@ const submit = () => {
 						</div>
 						<p class="col-span-full mt-6 text-2xl font-light">* Pflichtfelder</p>
 						<label class="col-span-full mt-4">
-							<input type="checkbox" name="einwilligung" id="" v-model="form.einwilligung">
+							<input type="checkbox" name="einwilligung" id="" v-model="form.einwilligung" required>
 							Hiermit erkläre ich, dass: meine Daten zur weiteren Verarbeitung speichern darf. Diese Einwilligung kann
-							jederzeit widerrufen werden. Weitere Informationen unter Datenschutz.
+							jederzeit widerrufen werden. Weitere Informationen unter Datenschutz. <span aria-hidden="true">*</span>
 						</label>
 						<Button variant="primary" class="mt-14 w-fit">Absenden</Button>
 					</form>

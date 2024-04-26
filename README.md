@@ -31,4 +31,8 @@ values ('Leon', 'Knirsch', 'knirsch-leon.png', 'leonknirsch@loremipsum.de')
 ## Hinweise
 
 ### Animationen
-Animationen sind mit CSS umgesetzt. Firefox deaktiviert die view-timeline/animation-timeline/scroll-timeline zurzeit standardmäßig. Safari hat noch keine Umsetzung. Wenn ein konsistenter Auftritt mitsamt Animationen über alle Browser hinweg zwingend erforderlich/erwünscht ist, kann natürlich auf JavaScript (z.B. gsap) zurückgegriffen werden.
+Animationen sind mit CSS umgesetzt. Die Startanimationen mithilfe von tailwindcss-animated, die "scroll"-Animationen mithilfe der relativ neuen view-timeline-API.
+Firefox deaktiviert die view-timeline/animation-timeline/scroll-timeline zurzeit standardmäßig. Safari hat noch keine Umsetzung. Wenn ein konsistenter Auftritt mitsamt Animationen über alle Browser hinweg zwingend erforderlich/erwünscht ist, kann natürlich auf JavaScript (z.B. gsap) zurückgegriffen werden.
+
+### Navigation
+Das Navigations-Menü ist in der mobilen Ansicht als Hamburger-Menü und mithilfe der neuen CSS popover-API umgesetzt die eine gute Browser-Unterstützung mitbringt. Für den Fall, dass die API noch nicht unterstützt wird, wird die Navigation mithilfe der CSS @supports not-Regel dauerhaft angezeigt.

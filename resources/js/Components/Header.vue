@@ -8,8 +8,8 @@ import NavLink from './NavLink.vue';
 
 <template>
 	<header class="flex justify-between gap-4 items-center h-32 sticky top-0 z-50 bg-white">
-		<a href="/">
-			<Icon_Cloud class="text-pink-600 size-12"></Icon_Cloud>
+		<a href="/" aria-label="Zur Startseite">
+			<Icon_Cloud class="text-pink-600 size-12" role="presentation" </Icon_Cloud>
 		</a>
 		<nav id="nav"
 			class="sm-only:!mx-4 sm-only:rounded-t-md sm-only:py-16 sm:h-max sm-only:bg-pink-100 sm:block sm:static sm:m-0 sm:overflow-visible"
@@ -25,7 +25,7 @@ import NavLink from './NavLink.vue';
 					</NavLink>
 				</li>
 				<li class="group relative has-dropdown">
-					<NavLink href="/ueber-uns" class="flex items-center">
+					<NavLink href="/ueber-uns" class="flex items-center" aria-haspopup="true">
 						&#xdc;ber uns
 						<Icon_CaretDown
 							class="sm-only:hidden -mt-[2px] transition-transform duration-300 sm:group-hover:-scale-100 w-6 h-auto aspect-square">
@@ -34,7 +34,7 @@ import NavLink from './NavLink.vue';
 					<ul class="
 						sm:opacity-0 sm:pointer-events-none sm:group-hover:block sm:group-focus-within:block sm:absolute top-full sm:group-hover:pointer-events-auto sm:group-focus-within:pointer-events-auto sm:group-hover:opacity-100 sm:group-focus-within:opacity-100 transition-opacity duration-300 sm:bg-pink-100
 						rounded-md sm:p-4 right-0
-					">
+					" aria-label="Mehr-Submenü">
 						<li>
 							<NavLink href="/kontakt">
 								Kontakt
@@ -88,7 +88,7 @@ import NavLink from './NavLink.vue';
 			}
 
 			&::backdrop {
-				@apply bg-black/25 backdrop-blur-md;
+				@apply bg-black/25 backdrop-blur-md pointer-events-none;
 			}
 		}
 	}
