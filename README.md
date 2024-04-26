@@ -30,6 +30,9 @@ values ('Leon', 'Knirsch', 'knirsch-leon.png', 'leonknirsch@loremipsum.de')
 
 ## Hinweise
 
+### E-Mail-Versand
+Zum Testen des E-Mail-Versands habe ich [mailtrap](https://mailtrap.io/) benutzt und die Zugangsdaten der .env-Datei hinzugefügt.
+
 ### Animationen
 Animationen sind mit CSS umgesetzt. Die Startanimationen mithilfe von tailwindcss-animated, die "scroll"-Animationen mithilfe der relativ neuen view-timeline-API.
 Firefox deaktiviert die view-timeline/animation-timeline/scroll-timeline zurzeit standardmäßig. Safari hat noch keine Umsetzung. Wenn ein konsistenter Auftritt mitsamt Animationen über alle Browser hinweg zwingend erforderlich/erwünscht ist, kann natürlich auf JavaScript (z.B. gsap) zurückgegriffen werden.
