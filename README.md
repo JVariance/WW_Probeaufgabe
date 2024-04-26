@@ -25,8 +25,9 @@ insert into teammembers (first_name,last_name,image_url,email)
 values ('Leon', 'Knirsch', 'knirsch-leon.png', 'leonknirsch@loremipsum.de')
 ```
 4. eventuell `php artisan migrate`
-5. `npm run dev`
-6. `php .\artisan serve`
+5. `npm install`
+6. `npm run dev`
+7. `php .\artisan serve`
 
 ## Hinweise
 

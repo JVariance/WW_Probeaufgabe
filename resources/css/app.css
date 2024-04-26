@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 body {
+    /*
+		container-"hack": 
+		verhindert, dass in (manchen) Browsern Inhalte hinter der scrollbar verschwinden
+	*/
+
     @apply w-dvw h-dvh overflow-hidden m-0 p-0 @container;
     font-family: "Open Sans" !important;
 }
@@ -27,105 +32,124 @@ body {
     scroll-timeline: --app vertical; */
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: "Raleway", sans-serif !important;
-}
-
-.fade-in-from-bottom {
-    --from: 450px;
-    --to: 0px;
-    --fill-mode: both;
-    --range: 0 100dvh;
-
-    view-timeline: --app;
-    animation-timeline: --app;
-
-    animation-name: fade-in-from-bottom;
-    animation-fill-mode: var(--fill-mode);
-    animation-range: var(--range);
-    animation-duration: 1ms; /* benötigt für Firefox*/
-}
-
-.fade-in-from-top {
-    view-timeline: --app;
-    animation-timeline: --app;
-
-    animation-name: fade-in-from-top;
-    animation-fill-mode: both;
-    animation-range: 0 100dvh;
-    animation-duration: 1ms; /* benötigt für Firefox*/
-}
-
-.fade-in-from-left {
-    view-timeline: --app;
-    animation-timeline: --app;
-
-    animation-name: fade-in-from-left;
-    animation-fill-mode: both;
-    animation-range: 0 100dvh;
-    animation-duration: 1ms; /* benötigt für Firefox*/
-}
-
-.fade-in-from-right {
-    view-timeline: --app;
-    animation-timeline: --app;
-
-    animation-name: fade-in-from-right;
-    animation-fill-mode: both;
-    animation-range: 0 100dvh;
-    animation-duration: 1ms; /* benötigt für Firefox*/
-}
-
-@keyframes fade-in-from-top {
-    from {
-        opacity: 0;
-        transform: translateY(-450px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0px);
+@layer base {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Raleway", sans-serif !important;
     }
 }
 
-@keyframes fade-in-from-right {
-    from {
-        opacity: 0;
-        transform: translateX(450px);
+@layer utilities {
+    .fade-in-from-bottom {
+        --from: 450px;
+        --to: 0px;
+        --fill-mode: both;
+        --range: 0 100dvh;
+
+        view-timeline: --app;
+        animation-timeline: --app;
+
+        animation-name: fade-in-from-bottom;
+        animation-fill-mode: var(--fill-mode);
+        animation-range: var(--range);
+        animation-duration: 1ms; /* benötigt für Firefox*/
     }
 
-    to {
-        opacity: 1;
-        transform: translateX(0px);
-    }
-}
+    .fade-in-from-top {
+        --from: -450px;
+        --to: 0px;
+        --fill-mode: both;
+        --range: 0 100dvh;
 
-@keyframes fade-in-from-bottom {
-    from {
-        opacity: 0;
-        transform: translateY(var(--from));
-    }
+        view-timeline: --app;
+        animation-timeline: --app;
 
-    to {
-        opacity: 1;
-        transform: translateY(var(--to));
-    }
-}
-
-@keyframes fade-in-from-left {
-    from {
-        opacity: 0;
-        transform: translateX(-450px);
+        animation-name: fade-in-from-top;
+        animation-fill-mode: both;
+        animation-range: 0 100dvh;
+        animation-duration: 1ms; /* benötigt für Firefox*/
     }
 
-    to {
-        opacity: 1;
-        transform: translateX(0px);
+    .fade-in-from-left {
+        --from: -450px;
+        --to: 0px;
+        --fill-mode: both;
+        --range: 0 100dvh;
+
+        view-timeline: --app;
+        animation-timeline: --app;
+
+        animation-name: fade-in-from-left;
+        animation-fill-mode: both;
+        animation-range: 0 100dvh;
+        animation-duration: 1ms; /* benötigt für Firefox*/
+    }
+
+    .fade-in-from-right {
+        --from: 450px;
+        --to: 0px;
+        --fill-mode: both;
+        --range: 0 100dvh;
+
+        view-timeline: --app;
+        animation-timeline: --app;
+
+        animation-name: fade-in-from-right;
+        animation-fill-mode: both;
+        animation-range: 0 100dvh;
+        animation-duration: 1ms; /* benötigt für Firefox*/
+    }
+
+    @keyframes fade-in-from-top {
+        from {
+            opacity: 0;
+            transform: translateY(-450px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+
+    @keyframes fade-in-from-right {
+        from {
+            opacity: 0;
+            transform: translateX(450px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+
+    @keyframes fade-in-from-bottom {
+        from {
+            opacity: 0;
+            transform: translateY(var(--from));
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(var(--to));
+        }
+    }
+
+    @keyframes fade-in-from-left {
+        from {
+            opacity: 0;
+            transform: translateX(-450px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0px);
+        }
     }
 }
 
